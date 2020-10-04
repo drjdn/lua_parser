@@ -35,4 +35,4 @@ binary.  Later versions of lua should also work but I haven't tested them.
 License
 -------
 
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://github.com/drjdn/lua_parser/blob/master/LICENSE.md)

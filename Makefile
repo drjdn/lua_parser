@@ -13,7 +13,7 @@ main.o: main.c
 #$(CC) $(CFLAGS) -DYYLEX -c -o $@ $+
 
 shared: $(OBJ)
-	$(CC) $(CFLAGS) -shared -o luap.so $+ -lm
+	$(CC) $(CFLAGS) -shared -o liblparser.so $+ -lm
 
 debug: run
 	gdb --args ./run -lua ./tests/fib2.lua

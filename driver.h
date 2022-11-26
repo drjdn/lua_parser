@@ -20,6 +20,6 @@ module *new_mod_from_string(char *src);
 void delete_mod(module *mod);
 
 int parse_mod(module *mod, char out);
-char *parse_mod_str(module *mod, int *err);
+char *parse_mod_str(module *mod, int err);
 
 #endif // _MODULE_H_

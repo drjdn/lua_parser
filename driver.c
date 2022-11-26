@@ -64,7 +64,7 @@ int parse_mod(module *mod, char out) {
   return status;
 }
 
-char *parse_mod_str(module *mod, int *err) {
+char *parse_mod_str(module *mod, int err) {
   yyscan_t sc;
   YYSTYPE val;
   YYLTYPE loc;
@@ -77,10 +77,10 @@ char *parse_mod_str(module *mod, int *err) {
   yyset_extra(&sd, sc);
 
   do {
-    *err = yypush_parse(ps, yylex(&val, &loc, sc), &val, &loc, sc, mod);
-  } while(*err == YYPUSH_MORE);
+    err = yypush_parse(ps, yylex(&val, &loc, sc), &val, &loc, sc, mod);
+  } while(err == YYPUSH_MORE);
 
-  if (*err == 0) {
+  if (err == 0) {
     str = pp_str(mod->root);
   }
 

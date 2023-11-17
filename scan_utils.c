@@ -6,7 +6,7 @@
 #include <string.h>
 #include "parser.h"
 
-int checkKw(char*s) {
+int checkKw(char* s) {
 #define CHECK(S,T) if(!strcmp(#S,s)) return TK_##T;
   switch(*s) {  
     case 'a':

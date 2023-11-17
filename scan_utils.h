@@ -12,7 +12,7 @@ struct sdata {
   int ncol;
 };
 
-int checkKw(char*s);
+int checkKw(char *s);
 char *TokenName(int t);
 
 // Scanner actions, to keep scan.l logic clear
